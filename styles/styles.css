@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+html {
+  padding: 10px;
+}
+
+body {
+  letter-spacing: 1.4px;
+  font-size: 0.8rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  display: inline-block;
+}
+
+p,
+li {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #00695c;
+}
+
+a:link {
+  color: #00695c;
+}
+
+a:visited {
+  color: #0099cc;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.subheading {
+  margin-left: 3px;
+  font-weight: normal;
+}
+
+article:first-of-type {
+  margin-top: 20px;
+}
+
+article {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.subTitle {
+  font-size: 0.9rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 40px;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.email {
+  text-decoration: none;
+}
+
+.listTiles {
+  list-style-type: none;
+  padding-left: 0;
+}
+.listTiles > li {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 0 10px 10px 0;
+}
+
+@media (min-width: 900px) {
+  html {
+    padding: 20px 0 10px 20px;
+  }
+
+  body {
+    width: 70%;
+  }
+
+  header {
+    margin-bottom: 20px;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "career contact" "projects technologies" "education hobbies" "achievements achievements";
+  }
+
+  #career {
+    grid-area: career;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+
+  #projects {
+    grid-area: projects;
+  }
+
+  #technologies {
+    grid-area: technologies;
+  }
+
+  #achievements {
+    grid-area: achievements;
+  }
+
+  #hobbies {
+    grid-area: hobbies;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
