@@ -1,4 +1,4 @@
+.vscode/
 imgs/
-styles/*
-!styles/styles.css
+styles/styles.css.map
 

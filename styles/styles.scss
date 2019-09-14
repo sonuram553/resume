@@ -1,26 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-}
-
-p {
-  line-height: 1.5;
-}
+@import "_reset.scss";
 
 html {
   padding: 10px;
 }
 
 body {
+  //border: 1px solid;
   letter-spacing: 1.4px;
   font-size: 0.8rem;
 }
@@ -44,11 +29,11 @@ strong {
 a:link {
   color: #00695c;
 }
-
 a:visited {
   color: #0099cc;
 }
 
+//Header
 header {
   display: flex;
   justify-content: space-between;
@@ -66,12 +51,14 @@ header {
   font-weight: normal;
 }
 
+//Main
+
 article:first-of-type {
   margin-top: 20px;
 }
 
 article {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 10px;
@@ -91,6 +78,7 @@ ul {
   padding-left: 40px;
 }
 
+//Contact
 i {
   margin-right: 5px;
 }
@@ -99,26 +87,28 @@ i {
   text-decoration: none;
 }
 
+//Technologies
 .listTiles {
   list-style-type: none;
   padding-left: 0;
-}
-.listTiles > li {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  display: inline-block;
-  padding: 8px;
-  margin-right: 10px;
+  > li {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px;
+    margin-right: 10px;
+  }
 }
 
+//Education
 #education p {
   margin-top: 4px;
 }
-
 .year {
   margin-right: 20px;
 }
 
+//Achievements
 table {
   width: 100%;
 }
@@ -148,7 +138,11 @@ td {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "career contact" "projects technologies" "education hobbies" "achievements achievements";
+    grid-template-areas:
+      "career contact"
+      "projects technologies"
+      "education hobbies"
+      "achievements achievements";
   }
 
   #career {
@@ -176,4 +170,4 @@ td {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+//Experiment
