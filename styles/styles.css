@@ -53,6 +53,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 20px;
 }
 
 .heading {
@@ -64,10 +65,6 @@ header {
 .subheading {
   margin-left: 3px;
   font-weight: normal;
-}
-
-article:first-of-type {
-  margin-top: 20px;
 }
 
 article {
@@ -134,10 +131,6 @@ td {
 
   body {
     width: 70%;
-  }
-
-  header {
-    margin-bottom: 20px;
   }
 
   article {
