@@ -1,4 +1,4 @@
-@import "_reset.scss";
+@import "../_reset.scss";
 
 html {
   padding: 10px;
@@ -6,14 +6,9 @@ html {
 
 body {
   //border: 1px solid;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 1.4px;
   font-size: 0.8rem;
-}
-
-h1,
-h2 {
-  margin: 0;
-  display: inline-block;
 }
 
 p,
@@ -42,7 +37,6 @@ header {
 }
 
 .heading {
-  text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
 }
@@ -50,6 +44,11 @@ header {
 .subheading {
   margin-left: 3px;
   font-weight: normal;
+}
+
+.title,
+.heading {
+  text-transform: capitalize;
 }
 
 //Main
@@ -62,7 +61,6 @@ article {
 }
 
 .title {
-  text-transform: uppercase;
   margin-bottom: 15px;
 }
 
@@ -71,17 +69,25 @@ article {
 }
 
 ul {
-  margin: 0;
   padding-left: 40px;
 }
 
 //Contact
-i {
+.fas {
+  width: 18px;
   margin-right: 5px;
 }
 
 .email {
   text-decoration: none;
+}
+
+//Projects
+.projectLink {
+  text-decoration: none;
+}
+.projectLink:hover {
+  text-decoration: underline;
 }
 
 //Technologies
@@ -95,14 +101,19 @@ i {
     padding: 8px;
     margin-right: 10px;
   }
+  .highlight {
+    border-color: #00695c;
+  }
 }
 
 //Education
 #education p {
   margin-top: 4px;
 }
-.year {
-  margin-right: 20px;
+
+.educationYear {
+  display: inline-block;
+  width: 80px;
 }
 
 //Achievements
