@@ -147,13 +147,7 @@ td {
   padding: 0 10px 10px 0;
 }
 
-@media (min-width: 900px) {
-  html {
-    padding: 20px 0 10px 20px;
-  }
-  body {
-    width: 70%;
-  }
+@media screen and (min-width: 900px) {
   article {
     margin: 0;
   }
@@ -195,6 +189,63 @@ td {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: hobbies;
+  }
+  html {
+    padding: 20px 0 10px 20px;
+  }
+  body {
+    width: 70%;
+  }
+}
+
+@media print {
+  article {
+    margin: 0;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "career contact" "projects technologies" "education hobbies" "achievements achievements";
+  }
+  #career {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: career;
+  }
+  #contact {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: contact;
+  }
+  #projects {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: projects;
+  }
+  #technologies {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: technologies;
+  }
+  #achievements {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: achievements;
+  }
+  #hobbies {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: hobbies;
+  }
+  html {
+    padding: 30px 20px 0;
+  }
+  body {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -125,15 +125,7 @@ td {
   padding: 0 10px 10px 0;
 }
 
-@media (min-width: 900px) {
-  html {
-    padding: 20px 0 10px 20px;
-  }
-
-  body {
-    width: 70%;
-  }
-
+@mixin create-grid {
   article {
     margin: 0;
   }
@@ -171,6 +163,30 @@ td {
 
   #hobbies {
     grid-area: hobbies;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  @include create-grid;
+
+  html {
+    padding: 20px 0 10px 20px;
+  }
+
+  body {
+    width: 70%;
+  }
+}
+
+@media print {
+  @include create-grid;
+
+  html {
+    padding: 30px 20px 0;
+  }
+
+  body {
+    width: 100%;
   }
 }
 
