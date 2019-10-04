@@ -113,6 +113,11 @@ ul {
   text-decoration: underline;
 }
 
+a.disabled {
+  pointer-events: none;
+  color: rgba(0, 105, 92, 0.7);
+}
+
 .listTiles {
   list-style-type: none;
   padding-left: 0;
@@ -242,7 +247,7 @@ td {
     grid-area: hobbies;
   }
   html {
-    padding: 30px 20px 0;
+    padding: 10px 20px 0;
   }
   body {
     width: 100%;

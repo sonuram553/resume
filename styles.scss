@@ -90,6 +90,11 @@ ul {
   text-decoration: underline;
 }
 
+a.disabled{
+  pointer-events: none;
+  color: rgba($color: #00695c, $alpha: 0.7)
+}
+
 //Technologies
 .listTiles {
   list-style-type: none;
@@ -182,7 +187,7 @@ td {
   @include create-grid;
 
   html {
-    padding: 30px 20px 0;
+    padding: 10px 20px 0;
   }
 
   body {
