@@ -90,9 +90,9 @@ ul {
   text-decoration: underline;
 }
 
-a.disabled{
+a.disabled {
   pointer-events: none;
-  color: rgba($color: #00695c, $alpha: 0.7)
+  color: rgba($color: #00695c, $alpha: 0.7);
 }
 
 //Technologies
@@ -193,6 +193,13 @@ td {
   body {
     width: 100%;
   }
+
+  header {
+    margin-bottom: 10px;
+  }
+
+  main {
+    grid-gap: 5px;
 }
 
 //Experiment
