@@ -13,7 +13,11 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3, ul, p {
+h1,
+h2,
+h3,
+ul,
+p {
   margin: 0;
 }
 
@@ -254,6 +258,9 @@ td {
   }
   header {
     margin-bottom: 10px;
+  }
+  main {
+    grid-gap: 5px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
