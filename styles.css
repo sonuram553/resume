@@ -109,7 +109,7 @@ article {
 }
 
 ul {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .fas {
@@ -133,12 +133,8 @@ ul {
   font-weight: 500;
 }
 
-#projects > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+#projects > div p {
+  display: inline-block;
 }
 
 a.disabled {
@@ -190,7 +186,7 @@ td {
     grid-gap: 10px;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "career contact" "internship technologies" "projects hobbies" "education education" "achievements achievements";
+        grid-template-areas: "career contact" "internship technologies" "education projects " "achievements hobbies";
   }
   #internship {
     -ms-grid-row: 2;
@@ -209,7 +205,7 @@ td {
   }
   #projects {
     -ms-grid-row: 3;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     grid-area: projects;
   }
   #technologies {
@@ -218,19 +214,17 @@ td {
     grid-area: technologies;
   }
   #education {
-    -ms-grid-row: 4;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: education;
   }
   #achievements {
-    -ms-grid-row: 5;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: achievements;
   }
   #hobbies {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 2;
     grid-area: hobbies;
   }
@@ -252,7 +246,7 @@ td {
     grid-gap: 10px;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "career contact" "internship technologies" "projects hobbies" "education education" "achievements achievements";
+        grid-template-areas: "career contact" "internship technologies" "education projects " "achievements hobbies";
   }
   #internship {
     -ms-grid-row: 2;
@@ -271,7 +265,7 @@ td {
   }
   #projects {
     -ms-grid-row: 3;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     grid-area: projects;
   }
   #technologies {
@@ -280,19 +274,17 @@ td {
     grid-area: technologies;
   }
   #education {
-    -ms-grid-row: 4;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: education;
   }
   #achievements {
-    -ms-grid-row: 5;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: achievements;
   }
   #hobbies {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 2;
     grid-area: hobbies;
   }

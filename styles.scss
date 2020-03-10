@@ -104,7 +104,7 @@ article {
 }
 
 ul {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 //Contact
@@ -131,8 +131,9 @@ ul {
   }
 
   > div {
-    display: flex;
-    justify-content: space-around;
+    p {
+      display: inline-block;
+    }
   }
 }
 
@@ -188,9 +189,8 @@ td {
     grid-template-areas:
       "career contact"
       "internship technologies"
-      "projects hobbies"
-      "education education"
-      "achievements achievements";
+      "education projects "
+      "achievements hobbies";
   }
 
   #internship {
