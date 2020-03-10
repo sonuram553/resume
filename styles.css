@@ -129,6 +129,18 @@ ul {
   text-decoration: underline;
 }
 
+#projects p {
+  font-weight: 500;
+}
+
+#projects > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 a.disabled {
   pointer-events: none;
   color: rgba(0, 105, 92, 0.7);

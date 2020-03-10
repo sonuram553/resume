@@ -125,6 +125,17 @@ ul {
   text-decoration: underline;
 }
 
+#projects {
+  p {
+    font-weight: 500;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 a.disabled {
   pointer-events: none;
   color: rgba($color: #00695c, $alpha: 0.7);
