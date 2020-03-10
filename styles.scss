@@ -81,6 +81,10 @@ header {
   text-transform: capitalize;
 }
 
+.company {
+  font-weight: 500;
+}
+
 //Main
 
 article {
@@ -172,9 +176,14 @@ td {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "career contact"
-      "projects technologies"
-      "education hobbies"
+      "internship technologies"
+      "projects hobbies"
+      "education education"
       "achievements achievements";
+  }
+
+  #internship {
+    grid-area: internship;
   }
 
   #career {
@@ -191,6 +200,10 @@ td {
 
   #technologies {
     grid-area: technologies;
+  }
+
+  #education {
+    grid-area: education;
   }
 
   #achievements {
