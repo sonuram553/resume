@@ -92,8 +92,12 @@ header {
   font-weight: 500;
 }
 
+main {
+  padding-bottom: 3rem;
+}
+
 article {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 10px;
@@ -304,6 +308,6 @@ td {
   }
   main {
     grid-gap: 5px;
+    padding-bottom: 0;
   }
 }
-/*# sourceMappingURL=styles.css.map */
