@@ -63,6 +63,10 @@ a:visited {
   text-transform: none;
 }
 
+.list__item:not(:last-child) {
+  margin-bottom: 21px;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;

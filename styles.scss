@@ -62,6 +62,12 @@ a:visited {
   text-transform: none;
 }
 
+.list {
+  &__item:not(:last-child) {
+    margin-bottom: 21px;
+  }
+}
+
 //Header
 header {
   display: flex;
