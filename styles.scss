@@ -37,10 +37,11 @@ body {
   font-size: 0.8rem;
 }
 
-p,
 li {
   margin: 0;
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 strong {
@@ -54,7 +55,11 @@ a:visited {
   color: #0099cc;
 }
 
-.time {
+.objective {
+  font-weight: 500;
+}
+
+.duration {
   margin-top: 3px;
   font-size: 0.7rem;
   opacity: 0.8;
@@ -63,13 +68,49 @@ a:visited {
 }
 
 .list {
-  &__item:not(:last-child) {
+  list-style-type: none;
+  padding-left: 0;
+
+  &__item {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px;
+    margin-right: 10px;
+
+    &--highlight {
+      border-color: #00695c;
+    }
+  }
+}
+
+.work {
+  header {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    color: #00695c;
+  }
+
+  .duration {
+    margin-left: 10px;
+  }
+
+  &__description {
+    margin-bottom: 6px;
+  }
+
+  &:not(:last-child) {
     margin-bottom: 21px;
   }
 }
 
 //Header
-header {
+#main-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -80,18 +121,18 @@ header {
   }
 }
 
-.heading {
+#heading {
   font-size: 2rem;
   letter-spacing: 2px;
 }
 
-.role {
+#role {
   font-size: 1.1rem;
   font-weight: normal;
   font-family: monospace;
 }
 
-.social {
+#social {
   a {
     display: inline-block;
     transition: all 0.2s ease-out;
@@ -114,10 +155,6 @@ header {
     cursor: pointer;
     width: 1.7rem;
     display: block;
-    /* border: 3px solid #00695c;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: content-box; */
   }
 }
 
@@ -126,8 +163,8 @@ header {
   font-weight: normal;
 }
 
-.title,
-.heading {
+.heading,
+.sub-heading {
   text-transform: capitalize;
 }
 
@@ -147,16 +184,11 @@ article {
   padding: 10px;
 }
 
-.title {
+.sub-heading {
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
-
-.subTitle {
-  font-size: 0.9rem;
-  margin-bottom: 6px;
 }
 
 ul {
@@ -164,6 +196,14 @@ ul {
 }
 
 //Contact
+.contact {
+  &__info {
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .fas {
   width: 18px;
   margin-right: 5px;
@@ -174,18 +214,27 @@ ul {
 }
 
 //Projects
-.projectLink {
+.project-link {
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
-.projectLink:hover {
-  text-decoration: underline;
+
+.personal-projects {
+  &__heading {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
 }
 
 #projects {
-  p {
-    font-weight: 500;
-  }
-
   > div {
     p {
       display: inline-block;
@@ -203,30 +252,21 @@ a.disabled {
   }
 }
 
-//Technologies
-.listTiles {
-  list-style-type: none;
-  padding-left: 0;
-  > li {
-    border: 1px solid rgba($color: #000000, $alpha: 0.2);
-    border-radius: 5px;
-    display: inline-block;
-    padding: 8px;
-    margin-right: 10px;
-  }
-  .highlight {
-    border-color: #00695c;
-  }
-}
-
 //Education
 #education p {
   margin-top: 4px;
 }
 
-.educationYear {
-  display: inline-block;
-  width: 80px;
+.education {
+  &__title {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  &__year {
+    display: inline-block;
+    width: 80px;
+  }
 }
 
 //Achievements
@@ -249,13 +289,13 @@ td {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "career contact"
-      "internship technologies"
+      "experience technologies"
       "education projects "
       "achievements hobbies";
   }
 
-  #internship {
-    grid-area: internship;
+  #experience {
+    grid-area: experience;
   }
 
   #career {

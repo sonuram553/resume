@@ -1,16 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Sonu Ram" />
     <meta
       name="description"
-      content="This webpage is the resume of Sonu Ram. It provides a basic resume or CV template for students"
+      content="I am working as a Frontend Engineer at Clap Research, a product company that develops cognitive search and extraction platforms.
+        My key responsibilities include development of responsive and robust single page applications (SPA) using technologies such as Angular,
+        React, Redux, RxJs, and ServiceWorker.
+        In the past, I have also worked as an Angular Developer at Antino Labs."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Sonu Ram</title>
 
-    <!-- Favorite Icon -->
+    <!-- Fav Icon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Fonts -->
@@ -25,219 +29,212 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header>
+    <header id="main-header">
       <hgroup>
-        <h1 class="heading">sonu ram</h1>
-        <h2 class="role">JavaScript Developer</h2>
+        <h1 id="heading">Sonu Ram</h1>
+        <h2 id="role">JavaScript Developer</h2>
       </hgroup>
-      <div class="social">
+
+      <div id="social">
         <a
           href="https://github.com/sonuram553?tab=repositories"
           target="_blank"
         >
           <img src="./images/icons/github.svg" alt="" />
         </a>
+
         <a href="https://www.linkedin.com/in/sonuram6960" target="_blank">
           <img src="./images/icons/linkedin.svg" alt="" />
         </a>
       </div>
-      <p class="age">Age: 26</p>
+
+      <p id="age">Age: 26</p>
     </header>
 
     <main>
       <article id="contact">
-        <h1 class="title">contact</h1>
-        <address>
+        <h2 class="sub-heading">Contact</h2>
+
+        <address class="contact__info">
           <p><i class="fas fa-phone-alt"></i>+91 798 622 4660</p>
           <p><i class="fas fa-envelope"></i>sonuram6960@gmail.com</p>
-          <p class="address"><i class="fas fa-map-marker-alt"></i>Bangalore</p>
+          <p><i class="fas fa-map-marker-alt"></i>Bangalore</p>
         </address>
       </article>
 
       <article id="career">
-        <h1 class="title">career objective</h1>
-        <p class="description">
+        <h2 class="sub-heading">Career Objective</h2>
+
+        <p>
           To obtain a challenging and responsible position as
           <strong>Front-End Developer</strong> within an organization that will
           utilize my skills and education as well as offer growth opportunities.
         </p>
       </article>
 
-      <article id="internship">
-        <h1 class="title">
+      <article id="experience">
+        <h2 class="sub-heading">
           <span>
             Angular Developer
             <span class="company">@ Antino Labs Pvt. Ltd.</span>
           </span>
 
-          <span class="time">
-            Nov 2019 - present
+          <span class="duration">
+            <time datetime="2019-11">Nov 2019</time> -
+            <time datetime="2020-08">Aug 2020</time>
           </span>
-        </h1>
+        </h2>
 
-        <ul>
-          <li class="list__item">
-            <h2 class="subTitle">
-              <a class="projectLink disabled" href="#" target="_blank"
-                >Hoopy <i class="fas fa-link"></i
-              ></a>
-              <span class="time">
-                <time>
-                  Feb 2020
-                </time>
-                -
-                <time>
-                  present
-                </time>
-              </span>
-            </h2>
+        <section class="work">
+          <header>
+            <h3 class="work__title">Hoopy</h3>
 
-            <p class="description">
-              <strong>Objective:</strong> To build a website for a vehicle
-              services company.
+            <p class="duration">
+              <time datetime="2020-02">Feb 2020</time> -
+              <time datetime="2020-08">Aug 2020</time>
             </p>
+          </header>
 
-            <ul>
-              <li>
-                Integrated Redux for centralized state management
-              </li>
-              <li>
-                Made the layout of web app with CSS Flex and Grid, resulting in
-                clean and concise HTML templates
-              </li>
-              <li>
-                Reduced the latency during the initial rendering of the page by
-                implementing Angular's Lazy Load feature
-              </li>
-            </ul>
-          </li>
+          <p class="work__description">
+            <span class="objective">Objective:</span> To build a website for a
+            vehicle services company.
+          </p>
 
-          <li class="list__item">
-            <h2 class="subTitle">
-              <a class="projectLink disabled" href="#" target="_blank"
-                >AMAI <i class="fas fa-link"></i
-              ></a>
-              <span class="time">
-                <time>
-                  Nov 2019
-                </time>
-                -
-                <time>
-                  Jan 2019
-                </time>
-              </span>
-            </h2>
+          <ul>
+            <li>Integrated Redux for centralized state management</li>
+            <li>
+              Made the layout of web app with CSS Flex and Grid, resulting in
+              clean and concise HTML templates
+            </li>
+            <li>
+              Reduced the latency during the initial rendering of the page by
+              implementing Angular's Lazy Load feature
+            </li>
+          </ul>
+        </section>
 
-            <p class="description">
-              <strong>Objective:</strong>
-              To build a website for a fashion store.
+        <section class="work">
+          <header>
+            <h3 class="work__title">AMAI</h3>
+
+            <p class="duration">
+              <time datetime="2019-11"> Nov 2019 </time>-
+              <time datetime="2020-01"> Jan 2020 </time>
             </p>
+          </header>
 
-            <ul>
-              <li>Created feature modules for orders and products section</li>
-              <li>
-                Added security by restricting user access based on their roles
-                with Angular's Route Guard feature
-              </li>
-              <li>
-                Implemented common token-interceptor service to add auth-token
-                to http-requests where it is required
-              </li>
-            </ul>
-          </li>
+          <p class="work__description">
+            <span class="objective">Objective:</span> To build a website for a
+            fashion store.
+          </p>
 
-          <li class="list__item">
-            <h2 class="subTitle">
-              <a class="projectLink disabled" href="#"
-                >Krishify <i class="fas fa-link"></i
-              ></a>
-              <span class="time">
-                <time>
-                  Dec 2019
-                </time>
-                -
-                <time>
-                  Dec 2019
-                </time>
-              </span>
-            </h2>
+          <ul>
+            <li>Created feature modules for orders and products section</li>
+            <li>
+              Added security by restricting user access based on their roles
+              with Angular's Route Guard feature
+            </li>
+            <li>
+              Implemented common token-interceptor service to add auth-token to
+              http-requests where it is required
+            </li>
+          </ul>
+        </section>
 
-            <p class="description">
-              <strong>
-                Objective:
-              </strong>
-              To build a progressive web app.
+        <section class="work">
+          <header>
+            <h3 class="work__title">Krishify</h3>
+
+            <p class="duration">
+              <time datetime="2019-12"> Dec 2019 </time>-
+              <time datetime="2019-12"> Dec 2019 </time>
             </p>
+          </header>
 
-            <ul>
-              <li>
-                Successfully created a web app to display live mandi rates
-              </li>
-              <li>
-                Made app installable on mobile and added functionality to cache
-                mandi rates
-              </li>
-            </ul>
-          </li>
-        </ul>
+          <p class="work__description">
+            <span class="objective"> Objective: </span>
+            To build a progressive web app.
+          </p>
+
+          <ul>
+            <li>Successfully created a web app to display live mandi rates</li>
+            <li>
+              Made app installable on mobile and added functionality to cache
+              mandi rates
+            </li>
+          </ul>
+        </section>
       </article>
 
       <article id="projects">
-        <h1 class="title">projects</h1>
+        <h2 class="sub-heading">Projects</h2>
 
-        <p>with HTML5, CSS3 and JavaScript</p>
-        <ul>
-          <li>
-            <a
-              class="projectLink"
-              href="https://sonuram553.github.io/halma-game/index.html"
-              target="_blank"
-              >Halma Game <i class="fas fa-link"></i>
-            </a>
-          </li>
+        <section class="project">
+          <header>
+            <h3 class="project__heading">Using HTML5, CSS3 and JavaScript</h3>
+          </header>
 
-          <li>
-            <a
-              class="projectLink"
-              href="https://sonuram553.github.io/signup-page/"
-              target="_blank"
-              >Signup Page
-              <i class="fas fa-link"></i>
-            </a>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <a
+                class="project__link"
+                href="https://sonuram553.github.io/halma-game/index.html"
+                target="_blank"
+              >
+                Halma Game <i class="fas fa-link"></i>
+              </a>
+            </li>
 
-        <p>with Angular 8</p>
-        <ul>
-          <li>
-            <a
-              class="projectLink"
-              href="https://dacoit-book.web.app/thieves"
-              target="_blank"
-              >Dacoit Book
-              <i class="fas fa-link"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="projectLink"
-              href="https://recipe-book-2b0a8.web.app/recipes"
-              target="_blank"
-              >Recipe Book
-              <i class="fas fa-link hide"></i>
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a
+                class="project__link"
+                href="https://sonuram553.github.io/signup-page/"
+                target="_blank"
+              >
+                Signup Page <i class="fas fa-link"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="project">
+          <header>
+            <h3 class="project__heading">Using Angular 8</h3>
+          </header>
+
+          <ul>
+            <li>
+              <a
+                class="project__link"
+                href="https://dacoit-book.web.app/thieves"
+                target="_blank"
+              >
+                Dacoit Book <i class="fas fa-link"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="project__link"
+                href="https://recipe-book-2b0a8.web.app/recipes"
+                target="_blank"
+              >
+                Recipe Book <i class="fas fa-link hide"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
       </article>
 
       <!-- <article id="projects">
-        <h1 class="title">projects</h1>
+        <h1 class="sub-heading">projects</h1>
         <ul>
           <li>
             <h2 class="subTitle">
               <a
-                class="projectLink"
+                class="project__link"
                 href="https://sonuram553.github.io/halma-game/index.html"
                 >Halma Game <i class="fas fa-link"></i
               ></a>
@@ -250,7 +247,7 @@
 
           <li>
             <h2 class="subTitle">
-              <a class="projectLink" href="https://dacoit-book.web.app/thieves"
+              <a class="project__link" href="https://dacoit-book.web.app/thieves"
                 >Dacoit Book <i class="fas fa-link"></i
               ></a>
             </h2>
@@ -262,7 +259,7 @@
           <li>
             <h2 class="subTitle">
               <a
-                class="projectLink"
+                class="project__link"
                 href="https://recipe-book-2b0a8.web.app/recipes/0"
                 >Recipe Book <i class="fas fa-link"></i
               ></a>
@@ -275,7 +272,7 @@
           <li>
             <h2 class="subTitle">
               <a
-                class="projectLink"
+                class="project__link"
                 href="https://sonuram553.github.io/signup-page/"
                 >Signup Page <i class="fas fa-link"></i
               ></a>
@@ -289,48 +286,62 @@
       </article> -->
 
       <article id="technologies">
-        <h1 class="title">technologies</h1>
-        <ul class="listTiles">
-          <li class="highlight"><strong>Angular 8</strong></li>
-          <li class="highlight"><strong>React</strong></li>
-          <li class="highlight"><strong>Redux</strong></li>
-          <li class="highlight"><strong>RxJS</strong></li>
-          <li class="highlight"><strong>NgRx</strong></li>
-          <li class="highlight"><strong>PWA</strong></li>
-          <li>Angular Material</li>
-          <li class="highlight"><strong>Git</strong></li>
-          <li>Google Dev Tool</li>
-          <li>TypeScript</li>
-          <li>JavaScript</li>
-          <li>Bootstrap</li>
-          <li>BEM</li>
-          <li>Sass 7-1 pattern</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Sass</li>
+        <h2 class="sub-heading">Technologies</h2>
+
+        <ul class="list">
+          <li class="list__item list__item--highlight">
+            <strong>Angular 8</strong>
+          </li>
+          <li class="list__item list__item--highlight">
+            <strong>React</strong>
+          </li>
+          <li class="list__item list__item--highlight">
+            <strong>Redux</strong>
+          </li>
+          <li class="list__item list__item--highlight">
+            <strong>RxJS</strong>
+          </li>
+          <li class="list__item list__item--highlight">
+            <strong>NgRx</strong>
+          </li>
+          <li class="list__item list__item--highlight"><strong>PWA</strong></li>
+          <li class="list__item">Angular Material</li>
+          <li class="list__item list__item--highlight"><strong>Git</strong></li>
+          <li class="list__item">Google Dev Tool</li>
+          <li class="list__item">TypeScript</li>
+          <li class="list__item">JavaScript</li>
+          <li class="list__item">Bootstrap</li>
+          <li class="list__item">BEM</li>
+          <li class="list__item">Sass 7-1 pattern</li>
+          <li class="list__item">HTML</li>
+          <li class="list__item">CSS</li>
+          <li class="list__item">Sass</li>
         </ul>
       </article>
 
       <article id="education">
-        <h1 class="title">education</h1>
-        <ul>
+        <h2 class="sub-heading">Education</h2>
+
+        <ul class="education__list">
           <li>
-            <h2 class="subTitle">
+            <h3 class="education__title">
               B.Tech in Computer Science Engineering, LPU
-            </h2>
+            </h3>
             <p>
-              <span class="educationYear">2013-18</span>
+              <span class="education__year">2013-18</span>
               <strong>8.23/10</strong>
             </p>
           </li>
+
           <li>
-            <h2 class="subTitle">Class XII CBSE Board</h2>
-            <p><span class="educationYear">2011-12</span> <span>67.7%</span></p>
+            <h3 class="education__title">Class XII CBSE Board</h3>
+            <p><span class="education__year">2011-12</span> 67.7%</p>
           </li>
+
           <li>
-            <h2 class="subTitle">Class X CBSE Board</h2>
+            <h3 class="education__title">Class X CBSE Board</h3>
             <p>
-              <span class="educationYear">2009-10</span>
+              <span class="education__year">2009-10</span>
               8.20/10
             </p>
           </li>
@@ -338,7 +349,8 @@
       </article>
 
       <article id="achievements">
-        <h1 class="title">academic achievements</h1>
+        <h2 class="sub-heading">Academic Achievements</h2>
+
         <table>
           <tbody>
             <tr>
@@ -348,6 +360,7 @@
               </td>
               <td>2016</td>
             </tr>
+
             <tr>
               <td>
                 Qualified to the
@@ -396,16 +409,17 @@
       </article>
 
       <article id="hobbies">
-        <h1 class="title">hobbies</h1>
-        <ul class="listTiles">
-          <li>Web Designing</li>
-          <li>Coding</li>
-          <li>Robotics</li>
-          <li>Volleyball</li>
+        <h2 class="sub-heading">Hobbies</h2>
 
-          <li>Cycling</li>
-          <li>Reading</li>
-          <li>Jogging</li>
+        <ul class="list">
+          <li class="list__item">Web Designing</li>
+          <li class="list__item">Coding</li>
+          <li class="list__item">Robotics</li>
+          <li class="list__item">Volleyball</li>
+
+          <li class="list__item">Cycling</li>
+          <li class="list__item">Reading</li>
+          <li class="list__item">Jogging</li>
 
           <!-- <li>Listening to music</li>
           <li>Watching movies</li> -->
