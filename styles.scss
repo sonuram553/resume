@@ -6,27 +6,6 @@ $primary-color: #00695c;
   margin: 0;
 }
 
-body {
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-}
-
-ul {
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-ul,
-p {
-  margin: 0;
-}
-
-p {
-  line-height: 1.5;
-}
-
 html {
   padding: 10px;
 }
@@ -35,6 +14,11 @@ body {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1.4px;
   font-size: 0.8rem;
+  min-height: 100vh;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -44,15 +28,22 @@ li {
   }
 }
 
+p {
+  line-height: 1.5;
+}
+
 strong {
   color: #00695c;
 }
 
-a:link {
-  color: #00695c;
-}
-a:visited {
-  color: #0099cc;
+a {
+  &:link {
+    color: #00695c;
+  }
+
+  &:visited {
+    color: #0099cc;
+  }
 }
 
 .objective {
@@ -122,8 +113,9 @@ a:visited {
 }
 
 #heading {
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: 2px;
+  font-weight: 500;
 }
 
 #role {
