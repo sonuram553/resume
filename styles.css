@@ -229,14 +229,13 @@ ul {
   text-decoration: underline;
 }
 
-.personal-projects__heading {
-  font-weight: bold;
+.project__heading {
   font-size: 0.8rem;
   margin-bottom: 8px;
 }
 
-.personal-projects:not(:last-child) {
-  margin-bottom: 17px;
+.project:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 #projects > div p {
@@ -253,18 +252,18 @@ a.disabled i {
   display: none;
 }
 
-#education p {
-  margin-top: 4px;
-}
-
 .education__title {
   font-size: 0.9rem;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .education__year {
   display: inline-block;
   width: 80px;
+}
+
+.education p {
+  font-size: 0.9rem;
 }
 
 table {
@@ -386,7 +385,7 @@ td {
     grid-area: hobbies;
   }
   html {
-    padding: 10px 20px 0;
+    padding: 15px 40px 0;
     font-size: 78%;
   }
   body {

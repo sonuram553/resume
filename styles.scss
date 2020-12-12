@@ -228,15 +228,14 @@ ul {
   }
 }
 
-.personal-projects {
+.project {
   &__heading {
-    font-weight: bold;
     font-size: 0.8rem;
     margin-bottom: 8px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
 }
 
@@ -259,19 +258,19 @@ a.disabled {
 }
 
 //Education
-#education p {
-  margin-top: 4px;
-}
-
 .education {
   &__title {
     font-size: 0.9rem;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
   }
 
   &__year {
     display: inline-block;
     width: 80px;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }
 
@@ -346,7 +345,7 @@ td {
   @include create-grid;
 
   html {
-    padding: 10px 20px 0;
+    padding: 15px 40px 0;
     font-size: 78%;
   }
 
