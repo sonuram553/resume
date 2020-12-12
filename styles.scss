@@ -24,7 +24,7 @@ ul {
 li {
   margin: 0;
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 
@@ -32,11 +32,18 @@ p {
   line-height: 1.5;
 }
 
+small {
+  font-size: 0.7rem;
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
 strong {
   color: #00695c;
 }
 
 a {
+  text-decoration: none;
   &:link {
     color: #00695c;
   }
@@ -44,6 +51,11 @@ a {
   &:visited {
     color: #0099cc;
   }
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 .objective {
@@ -76,10 +88,8 @@ a {
 }
 
 .work {
-  header {
-    margin-bottom: 6px;
-    display: flex;
-    justify-content: flex-start;
+  &:not(:last-child) {
+    margin-bottom: 18px;
   }
 
   &__title {
@@ -93,10 +103,6 @@ a {
 
   &__description {
     margin-bottom: 6px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 21px;
   }
 }
 
@@ -173,14 +179,11 @@ article {
   border: 1px solid rgba($color: #000000, $alpha: 0.13);
   border-radius: 5px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .sub-heading {
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
 }
 
 ul {
@@ -203,6 +206,17 @@ ul {
 
 .email {
   text-decoration: none;
+}
+
+//Experience
+.experience {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  header {
+    margin-bottom: 6px;
+  }
 }
 
 //Projects
@@ -322,10 +336,6 @@ td {
 @media screen and (min-width: 900px) {
   @include create-grid;
 
-  /* html {
-    padding: 20px 0 10px 20px;
-  } */
-
   body {
     width: 70%;
     margin: 2rem auto;
@@ -355,5 +365,3 @@ td {
     padding-bottom: 0;
   }
 }
-
-//Experiment
