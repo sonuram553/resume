@@ -120,7 +120,7 @@ a:visited {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 #main-header p {
@@ -134,7 +134,7 @@ a:visited {
 }
 
 #role {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   font-family: monospace;
 }
@@ -385,7 +385,7 @@ td {
     grid-area: hobbies;
   }
   html {
-    padding: 15px 40px 0;
+    padding: 0 40px 0;
     font-size: 78%;
   }
   body {

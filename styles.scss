@@ -111,7 +111,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   p {
     margin: 0;
@@ -125,7 +125,7 @@ a {
 }
 
 #role {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   font-family: monospace;
 }
@@ -345,7 +345,7 @@ td {
   @include create-grid;
 
   html {
-    padding: 15px 40px 0;
+    padding: 0 40px 0;
     font-size: 78%;
   }
 
