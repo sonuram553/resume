@@ -220,22 +220,12 @@ ul {
 }
 
 //Projects
-.project-link {
-  text-decoration: none;
+.projects {
+  display: grid;
+  gap: 4px;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.project {
-  &__heading {
-    font-size: 0.8rem;
-    margin-bottom: 8px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 15px;
+  &__link {
+    font-size: 0.83rem;
   }
 }
 

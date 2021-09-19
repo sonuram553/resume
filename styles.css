@@ -221,21 +221,14 @@ ul {
   margin-bottom: 6px;
 }
 
-.project-link {
-  text-decoration: none;
+.projects {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
 }
 
-.project-link:hover {
-  text-decoration: underline;
-}
-
-.project__heading {
-  font-size: 0.8rem;
-  margin-bottom: 8px;
-}
-
-.project:not(:last-child) {
-  margin-bottom: 15px;
+.projects__link {
+  font-size: 0.83rem;
 }
 
 #projects > div p {
