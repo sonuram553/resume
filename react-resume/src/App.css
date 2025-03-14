@@ -1,0 +1,373 @@
+* {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  padding: 10px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1.4px;
+  font-size: 0.8rem;
+  min-height: 100vh;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+small {
+  font-size: 0.7rem;
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
+strong {
+  color: #00695c;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #00695c;
+}
+
+a:visited {
+  color: #0099cc;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.objective {
+  font-weight: 500;
+}
+
+.duration {
+  margin-top: 3px;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list__item {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.list__item--highlight {
+  border-color: #00695c;
+}
+
+.work:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.work__title {
+  font-size: 0.9rem;
+  color: #00695c;
+}
+
+.work .duration {
+  margin-left: 10px;
+}
+
+.work__description {
+  margin-bottom: 6px;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 13px;
+}
+
+#main-header p {
+  margin: 0;
+}
+
+#heading {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+#role {
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-family: monospace;
+}
+
+#social a {
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+
+#social a:not(:last-child) {
+  margin-right: 10px;
+}
+
+#social a:hover {
+  transition: all 0.2s ease-in;
+  transform: scale(1.2);
+}
+
+#social a:active {
+  transform: scale(1.16);
+}
+
+#social img {
+  cursor: pointer;
+  width: 1.6rem;
+  display: block;
+}
+
+.subheading {
+  margin-left: 3px;
+  font-weight: normal;
+}
+
+.heading,
+.sub-heading {
+  text-transform: capitalize;
+}
+
+.company {
+  font-weight: 500;
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+article {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+.sub-heading {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.contact__info p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.fas {
+  width: 18px;
+  margin-right: 5px;
+}
+
+.email {
+  text-decoration: none;
+}
+
+.experience:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.experience header {
+  margin-bottom: 6px;
+}
+
+.projects {
+  display: grid;
+  gap: 4px;
+}
+
+.projects__link {
+  font-size: 0.83rem;
+}
+
+#projects > div p {
+  display: inline-block;
+}
+
+a.disabled {
+  pointer-events: none;
+  color: #00695c;
+  margin-right: 5px;
+}
+
+a.disabled i {
+  display: none;
+}
+
+.education__title {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.education__year {
+  display: inline-block;
+  width: 80px;
+}
+
+.education p {
+  font-size: 0.9rem;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 0 10px 10px 0;
+}
+
+@media screen and (min-width: 900px) {
+  article {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "career contact"
+      "experience technologies"
+      "education projects"
+      "achievements hobbies";
+  }
+
+  #experience {
+    grid-area: experience;
+  }
+
+  #career {
+    grid-area: career;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+
+  #projects {
+    grid-area: projects;
+  }
+
+  #technologies {
+    grid-area: technologies;
+  }
+
+  #education {
+    grid-area: education;
+  }
+
+  #achievements {
+    grid-area: achievements;
+  }
+
+  #hobbies {
+    grid-area: hobbies;
+  }
+
+  body {
+    width: 70%;
+    margin: 2rem auto;
+  }
+}
+
+@media print {
+  article {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "career contact"
+      "experience technologies"
+      "education projects"
+      "achievements hobbies";
+  }
+
+  #experience {
+    grid-area: experience;
+  }
+
+  #career {
+    grid-area: career;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+
+  #projects {
+    grid-area: projects;
+  }
+
+  #technologies {
+    grid-area: technologies;
+  }
+
+  #education {
+    grid-area: education;
+  }
+
+  #achievements {
+    grid-area: achievements;
+  }
+
+  #hobbies {
+    grid-area: hobbies;
+  }
+
+  html {
+    font-size: 78%;
+  }
+
+  body {
+    width: 100%;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header {
+    margin-bottom: 10px;
+  }
+
+  main {
+    grid-gap: 5px;
+    padding-bottom: 0;
+  }
+}
