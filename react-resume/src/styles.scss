@@ -1,3 +1,5 @@
+$primary-color: #00695c;
+
 * {
   backface-visibility: hidden;
   box-sizing: border-box;
@@ -21,10 +23,9 @@ ul {
 
 li {
   margin: 0;
-}
-
-li:not(:last-child) {
-  margin-bottom: 8px;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 p {
@@ -37,24 +38,23 @@ small {
   font-family: sans-serif;
 }
 
-strong {
-  color: #00695c;
-}
-
 #age {
   width: 170px;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:link {
+strong {
   color: #00695c;
 }
 
-a:visited {
-  color: #0099cc;
+a {
+  text-decoration: none;
+  &:link {
+    color: #00695c;
+  }
+
+  &:visited {
+    color: #0099cc;
+  }
 }
 
 .space-between {
@@ -77,46 +77,49 @@ a:visited {
 .list {
   list-style-type: none;
   padding-left: 0;
+
+  &__item {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px;
+    margin-right: 10px;
+
+    &--highlight {
+      border-color: #00695c;
+    }
+  }
 }
 
-.list__item {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  display: inline-block;
-  padding: 8px;
-  margin-right: 10px;
+.work {
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    color: #00695c;
+  }
+
+  .duration {
+    margin-left: 10px;
+  }
+
+  &__description {
+    margin-bottom: 6px;
+  }
 }
 
-.list__item--highlight {
-  border-color: #00695c;
-}
-
-.work:not(:last-child) {
-  margin-bottom: 18px;
-}
-
-.work__title {
-  font-size: 0.9rem;
-  color: #00695c;
-}
-
-.work .duration {
-  margin-left: 10px;
-}
-
-.work__description {
-  margin-bottom: 6px;
-}
-
+//Header
 #main-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 13px;
-}
 
-#main-header p {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 #heading {
@@ -131,28 +134,30 @@ a:visited {
   font-family: monospace;
 }
 
-#social a {
-  display: inline-block;
-  transition: all 0.2s ease-out;
-}
+#social {
+  a {
+    display: inline-block;
+    transition: all 0.2s ease-out;
 
-#social a:not(:last-child) {
-  margin-right: 10px;
-}
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
 
-#social a:hover {
-  transition: all 0.2s ease-in;
-  transform: scale(1.2);
-}
+    &:hover {
+      transition: all 0.2s ease-in;
+      transform: scale(1.2);
+    }
 
-#social a:active {
-  transform: scale(1.16);
-}
+    &:active {
+      transform: scale(1.16);
+    }
+  }
 
-#social img {
-  cursor: pointer;
-  width: 1.6rem;
-  display: block;
+  img {
+    cursor: pointer;
+    width: 1.6rem;
+    display: block;
+  }
 }
 
 .subheading {
@@ -169,13 +174,14 @@ a:visited {
   font-weight: 500;
 }
 
+//Main
 main {
   padding-bottom: 3rem;
 }
 
 article,
 footer {
-  border: 1px solid rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba($color: #000000, $alpha: 0.13);
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 10px 15px;
@@ -196,8 +202,13 @@ ul {
   padding-left: 20px;
 }
 
-.contact__info p:not(:last-child) {
-  margin-bottom: 10px;
+//Contact
+.contact {
+  &__info {
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .fas {
@@ -209,51 +220,63 @@ ul {
   text-decoration: none;
 }
 
-.experience:not(:last-child) {
-  margin-bottom: 20px;
+//Experience
+.experience {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  header {
+    margin-bottom: 6px;
+  }
 }
 
-.experience header {
-  margin-bottom: 6px;
-}
-
+//Projects
 .projects {
   display: grid;
   gap: 4px;
+
+  &__link {
+    font-size: 0.83rem;
+  }
 }
 
-.projects__link {
-  font-size: 0.83rem;
-}
-
-#projects > div p {
-  display: inline-block;
+#projects {
+  > div {
+    p {
+      display: inline-block;
+    }
+  }
 }
 
 a.disabled {
   pointer-events: none;
-  color: #00695c;
+  color: $primary-color;
   margin-right: 5px;
+
+  i {
+    display: none;
+  }
 }
 
-a.disabled i {
-  display: none;
+//Education
+.education {
+  &__title {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+  }
+
+  &__year {
+    display: inline-block;
+    width: 80px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
 
-.education__title {
-  font-size: 0.9rem;
-  margin-bottom: 3px;
-}
-
-.education__year {
-  display: inline-block;
-  width: 80px;
-}
-
-.education p {
-  font-size: 0.9rem;
-}
-
+//Achievements
 table {
   width: 100%;
 }
@@ -267,7 +290,7 @@ td {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 900px) {
+@mixin create-grid {
   article {
     margin: 0;
   }
@@ -278,7 +301,7 @@ td {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "experience technologies"
-      "education projects"
+      "education projects "
       "achievements hobbies"
       "contact contact";
   }
@@ -314,6 +337,10 @@ td {
   #hobbies {
     grid-area: hobbies;
   }
+}
+
+@media screen and (min-width: 900px) {
+  @include create-grid;
 
   body {
     width: 70%;
@@ -322,52 +349,7 @@ td {
 }
 
 @media print {
-  article {
-    margin: 0;
-  }
-
-  main {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-      "experience technologies"
-      "education projects"
-      "achievements hobbies"
-      "contact contact";
-  }
-
-  #experience {
-    grid-area: experience;
-  }
-
-  #career {
-    grid-area: career;
-  }
-
-  #contact {
-    grid-area: contact;
-  }
-
-  #projects {
-    grid-area: projects;
-  }
-
-  #technologies {
-    grid-area: technologies;
-  }
-
-  #education {
-    grid-area: education;
-  }
-
-  #achievements {
-    grid-area: achievements;
-  }
-
-  #hobbies {
-    grid-area: hobbies;
-  }
+  @include create-grid;
 
   html {
     font-size: 78%;

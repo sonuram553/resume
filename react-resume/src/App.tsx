@@ -1,12 +1,11 @@
 import React from "react";
 import { resumeData } from "./data/resumeData";
-import "./App.css";
+import "./styles.scss";
 
 function App() {
   const {
     header,
     contact,
-    careerObjective,
     experience,
     projects,
     technologies,
