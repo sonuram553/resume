@@ -57,7 +57,7 @@ export interface ResumeData {
 export const resumeData: ResumeData = {
   header: {
     name: "Sonu Ram",
-    role: "Software Engineer",
+    role: "Senior MTS",
     age: 28,
     social: {
       github: "https://github.com/sonuram553",
@@ -68,20 +68,27 @@ export const resumeData: ResumeData = {
   contact: {
     phone: "+91 798 622 4660",
     email: "sonuram6960@gmail.com",
-    location: "Trivandrum",
+    location: "Hyderabad, Telangana",
   },
   careerObjective:
     "To obtain a challenging and responsible position as a Software Developer within an organization that will utilize my skills and education as well as offer growth opportunities.",
   experience: [
     {
       company: "ThoughtSpot",
-      role: "Software Engineer",
+      role: "MTS 3",
       duration: {
         start: "Apr 2023",
         end: "present",
       },
-      description:
-        "We are using a tech stack that includes React, Typescript, Javascript, Scss, HTML, and CSS to build the Frontend of the ThoughtSpot web application.",
+      achievements: [
+        "Awarded 'Star Performer of the Month' twice for exceptional contributions and team impact.",
+        "Triaged and resolved customer-reported bugs (e.g., HP, CVS Health).",
+        "Authored 40+ E2E test cases using Playwright within a tight timeline.",
+        "Upgraded connection creation flow and UI while assisting team members effectively.",
+        "Worked on Epics: Categorization for Connectors, Connection Creation UX Revamp, and Multiple Configurations per Connection.",
+        "Developed a reusable, pixel-perfect Dynamic Form React component.",
+        "Actively addressed on-call issues related to team Embrace.",
+      ],
     },
     {
       company: "Genpro Research",

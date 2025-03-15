@@ -20,7 +20,7 @@ function App() {
       <header id="main-header">
         <hgroup>
           <h1 id="heading">{header.name}</h1>
-          <h2 id="role">{header.role}</h2>
+          {/* <h2 id="role">{header.role}</h2> */}
         </hgroup>
 
         <div id="social">
@@ -50,7 +50,7 @@ function App() {
           </a>
         </div>
 
-        <p id="age">Age: {header.age}</p>
+        <p id="age">{/* Age: {header.age} */}</p>
       </header>
 
       <main>
@@ -79,7 +79,14 @@ function App() {
 
         <article id="experience">
           <h2 className="sub-heading">
-            Experience <small>{experience.length}yrs</small>
+            Experience{" "}
+            <small>
+              {(
+                (new Date().getTime() - new Date("2019-11-01").getTime()) /
+                (1000 * 60 * 60 * 24 * 365)
+              ).toFixed(1)}{" "}
+              yrs
+            </small>
           </h2>
           {experience.map((exp, index) => (
             <section key={index} className="experience">
