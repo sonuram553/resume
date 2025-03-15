@@ -173,7 +173,8 @@ main {
   padding-bottom: 3rem;
 }
 
-article {
+article,
+footer {
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 5px;
   margin-bottom: 20px;
@@ -261,6 +262,11 @@ td {
   padding: 0 10px 10px 0;
 }
 
+#contact {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 900px) {
   article {
     margin: 0;
@@ -271,10 +277,10 @@ td {
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "career contact"
       "experience technologies"
       "education projects"
-      "achievements hobbies";
+      "achievements hobbies"
+      "contact contact";
   }
 
   #experience {
@@ -325,10 +331,10 @@ td {
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "career contact"
       "experience technologies"
       "education projects"
-      "achievements hobbies";
+      "achievements hobbies"
+      "contact contact";
   }
 
   #experience {

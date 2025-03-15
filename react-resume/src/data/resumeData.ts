@@ -52,6 +52,7 @@ export interface ResumeData {
     year: string;
   }>;
   hobbies: string[];
+  libraries: string[];
 }
 
 export const resumeData: ResumeData = {
@@ -98,11 +99,10 @@ export const resumeData: ResumeData = {
         end: "Apr 2023",
       },
       achievements: [
-        "Worked with SlateJS and PDF.js libraries",
-        "Implemented PDF zoom and rotate functionality",
-        "Implemented caching of recently viewed PDF",
-        "Displayed images and tables in the DCD preview",
-        "Created a carousel for recommendation pills",
+        "Received Coaching Champion 2022 award for exceptional mentoring and guidance.",
+        "Developed features on top SlateJS and PDF.js libraries.",
+        "Implemented PDF functionalities, including zoom and rotate.",
+        "Developed a reusable react component carousel for recommendation pills.",
       ],
     },
     {
@@ -112,32 +112,10 @@ export const resumeData: ResumeData = {
         start: "Nov 2019",
         end: "Sep 2020",
       },
-      projects: [
-        {
-          name: "Hoopy",
-          duration: {
-            start: "Feb 2020",
-            end: "Sep 2020",
-          },
-          objective: "To build a website for a vehicle services company.",
-          achievements: [
-            "Integrated Redux for centralized state management",
-            "Made the layout of web app with CSS Flex and Grid, resulting in clean and concise HTML templates",
-            "Reduced the latency during the initial rendering of the page by implementing Angular's Lazy Load feature",
-          ],
-        },
-        {
-          name: "AMAI",
-          duration: {
-            start: "Nov 2019",
-            end: "Jan 2020",
-          },
-          objective: "To build a website for a fashion store.",
-          achievements: [
-            "Created feature modules for orders and products section",
-            "Implemented token-interceptor to add auth-token to http-requests",
-          ],
-        },
+      achievements: [
+        "Integrated Redux to achieve efficient and centralized state management.",
+        "Optimized initial rendering performance by implementing Angular's Lazy Load feature, significantly reducing latency.",
+        "Enhanced application security by implementing role-based access control using Angular's Route Guard feature.",
       ],
     },
   ],
@@ -236,4 +214,5 @@ export const resumeData: ResumeData = {
     "Reading",
     "Jogging",
   ],
+  libraries: ["SlateJS", "PDFjs", "AgGrid"],
 };

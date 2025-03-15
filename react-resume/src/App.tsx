@@ -10,6 +10,7 @@ function App() {
     experience,
     projects,
     technologies,
+    libraries,
     education,
     achievements,
     hobbies,
@@ -54,28 +55,10 @@ function App() {
       </header>
 
       <main>
-        <article id="contact">
-          <h2 className="sub-heading">Contact</h2>
-          <address className="contact__info">
-            <p>
-              <i className="fas fa-phone-alt"></i>
-              <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-            </p>
-            <p>
-              <i className="fas fa-envelope"></i>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            </p>
-            <p>
-              <i className="fas fa-map-marker-alt"></i>
-              {contact.location}
-            </p>
-          </address>
-        </article>
-
-        <article id="career">
+        {/* <article id="career">
           <h2 className="sub-heading">Career Objective</h2>
           <p>{careerObjective}</p>
-        </article>
+        </article> */}
 
         <article id="experience">
           <h2 className="sub-heading">
@@ -161,6 +144,15 @@ function App() {
               </li>
             ))}
           </ul>
+
+          <h2 className="sub-heading">Libraries Used</h2>
+          <ul className="list">
+            {libraries.map((lib, index) => (
+              <li key={index} className="list__item">
+                {lib}
+              </li>
+            ))}
+          </ul>
         </article>
 
         <article id="education" className="education">
@@ -202,6 +194,21 @@ function App() {
             ))}
           </ul>
         </article>
+
+        <footer id="contact">
+          <p>
+            <i className="fas fa-phone-alt"></i>
+            <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+          </p>
+          <p>
+            <i className="fas fa-envelope"></i>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </p>
+          <p>
+            <i className="fas fa-map-marker-alt"></i>
+            {contact.location}
+          </p>
+        </footer>
       </main>
     </div>
   );
