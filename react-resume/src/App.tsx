@@ -13,6 +13,7 @@ function App() {
     education,
     achievements,
     hobbies,
+    trainings,
   } = resumeData;
 
   return (
@@ -70,128 +71,157 @@ function App() {
               yrs
             </small>
           </h2>
-          {experience.map((exp, index) => (
-            <section key={index} className="experience">
-              <header>
-                <h3 className="space-between">
-                  <span>
-                    {exp.role}
-                    <span className="company"> @ {exp.company}</span>
-                  </span>
-                  <span className="duration">
-                    <time>{exp.duration.start}</time> - {exp.duration.end}
-                  </span>
-                </h3>
-              </header>
-              {exp.description && <p>{exp.description}</p>}
-              {exp.achievements && (
-                <ul>
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i}>{achievement}</li>
-                  ))}
-                </ul>
-              )}
-              {exp.projects &&
-                exp.projects.map((project, i) => (
-                  <section key={i} className="work">
-                    <header className="space-between">
-                      <h4 className="work__title">{project.name}</h4>
-                      <p className="duration">
-                        <time>{project.duration.start}</time> -{" "}
-                        <time>{project.duration.end}</time>
+          <section className="article-body">
+            {experience.map((exp, index) => (
+              <section key={index} className="experience">
+                <header>
+                  <h3 className="space-between">
+                    <span>
+                      {exp.role}
+                      <span className="company"> @ {exp.company}</span>
+                    </span>
+                    <span className="duration">
+                      <time>{exp.duration.start}</time> - {exp.duration.end}
+                    </span>
+                  </h3>
+                </header>
+                {exp.description && <p>{exp.description}</p>}
+                {exp.achievements && (
+                  <ul>
+                    {exp.achievements.map((achievement, i) => (
+                      <li
+                        key={i}
+                        dangerouslySetInnerHTML={{ __html: achievement }}
+                      ></li>
+                    ))}
+                  </ul>
+                )}
+                {exp.projects &&
+                  exp.projects.map((project, i) => (
+                    <section key={i} className="work">
+                      <header className="space-between">
+                        <h4 className="work__title">{project.name}</h4>
+                        <p className="duration">
+                          <time>{project.duration.start}</time> -{" "}
+                          <time>{project.duration.end}</time>
+                        </p>
+                      </header>
+                      <p className="work__description">
+                        <span className="objective">Objective:</span>{" "}
+                        {project.objective}
                       </p>
-                    </header>
-                    <p className="work__description">
-                      <span className="objective">Objective:</span>{" "}
-                      {project.objective}
-                    </p>
-                    <ul>
-                      {project.achievements.map((achievement, j) => (
-                        <li key={j}>{achievement}</li>
-                      ))}
-                    </ul>
-                  </section>
-                ))}
-            </section>
-          ))}
+                      <ul>
+                        {project.achievements.map((achievement, j) => (
+                          <li key={j}>{achievement}</li>
+                        ))}
+                      </ul>
+                    </section>
+                  ))}
+              </section>
+            ))}
+          </section>
         </article>
 
         <article id="projects">
           <h2 className="sub-heading">Projects</h2>
-          <ul className="projects">
-            {projects.map((project, index) => (
-              <li key={index} className="projects__link">
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.name} <i className="fas fa-link"></i>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <section className="article-body">
+            <ul className="projects">
+              {projects.map((project, index) => (
+                <li key={index} className="projects__link">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.name} <i className="fas fa-link"></i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
         </article>
 
         <article id="technologies">
           <h2 className="sub-heading">Technologies</h2>
-          <ul className="list">
-            {technologies.highlighted.map((tech, index) => (
-              <li key={index} className="list__item list__item--highlight">
-                <strong>{tech}</strong>
-              </li>
-            ))}
-            {technologies.other.map((tech, index) => (
-              <li key={index} className="list__item">
-                {tech}
-              </li>
-            ))}
-          </ul>
+          <section className="article-body">
+            <ul className="list">
+              {technologies.map((tech, index) => (
+                <li key={index} className="list__item">
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </article>
 
+        <article id="libraries">
           <h2 className="sub-heading">Libraries Used</h2>
-          <ul className="list">
-            {libraries.map((lib, index) => (
-              <li key={index} className="list__item">
-                {lib}
-              </li>
-            ))}
-          </ul>
+          <section className="article-body">
+            <ul className="list">
+              {libraries.map((lib, index) => (
+                <li key={index} className="list__item">
+                  {lib}
+                </li>
+              ))}
+            </ul>
+          </section>
         </article>
 
         <article id="education" className="education">
           <h2 className="sub-heading">Education</h2>
-          <ul className="education__list">
-            {education.map((edu, index) => (
-              <li key={index}>
-                <h3 className="education__title">{edu.degree}</h3>
-                <p>
-                  <span className="education__year">{edu.year}</span>
-                  <strong>{edu.score}</strong>
-                </p>
-              </li>
-            ))}
-          </ul>
+          <section className="article-body">
+            <ul className="education__list">
+              {education.map((edu, index) => (
+                <li key={index}>
+                  <h3 className="education__title">{edu.degree}</h3>
+                  <p>
+                    <span className="education__year">{edu.year}</span>
+                    <span className="education__score">{edu.score}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
         </article>
 
         <article id="achievements">
           <h2 className="sub-heading">Academic Achievements</h2>
-          <table>
-            <tbody>
-              {achievements.map((achievement, index) => (
-                <tr key={index}>
-                  <td>{achievement.description}</td>
-                  <td>{achievement.year}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <section className="article-body">
+            <table>
+              <tbody>
+                {achievements.map((achievement, index) => (
+                  <tr key={index}>
+                    <td>{achievement.description}</td>
+                    <td>{achievement.year}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
         </article>
 
         <article id="hobbies">
           <h2 className="sub-heading">Hobbies</h2>
-          <ul className="list">
-            {hobbies.map((hobby, index) => (
-              <li key={index} className="list__item">
-                {hobby}
-              </li>
-            ))}
-          </ul>
+          <section className="article-body">
+            <ul className="list">
+              {hobbies.map((hobby, index) => (
+                <li key={index} className="list__item">
+                  {hobby}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </article>
+
+        <article id="trainings">
+          <h2 className="sub-heading">Trainings</h2>
+          <section className="article-body">
+            <ul>
+              {trainings.map((training, index) => (
+                <li key={index}>{training}</li>
+              ))}
+            </ul>
+          </section>
         </article>
 
         <footer id="contact">

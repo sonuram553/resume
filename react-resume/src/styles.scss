@@ -82,7 +82,7 @@ a {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     display: inline-block;
-    padding: 8px;
+    padding: 6px 8px;
     margin-right: 10px;
 
     &--highlight {
@@ -184,14 +184,21 @@ footer {
   border: 1px solid rgba($color: #000000, $alpha: 0.13);
   border-radius: 5px;
   margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.article-body,
+footer {
   padding: 10px 15px;
 }
 
 .sub-heading {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background-color: rgba($color: lightblue, $alpha: 0.4);
+  padding: 5px 15px;
 }
 
 .sub-heading small {
@@ -290,6 +297,22 @@ td {
   justify-content: space-between;
 }
 
+#hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .list__item {
+    margin: 0;
+    margin-right: 10px;
+  }
+}
+
 @mixin create-grid {
   article {
     margin: 0;
@@ -301,8 +324,10 @@ td {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "experience technologies"
-      "education projects "
-      "achievements hobbies"
+      "experience libraries"
+      "trainings education"
+      "achievements projects"
+      "hobbies hobbies"
       "contact contact";
   }
 
@@ -337,6 +362,10 @@ td {
   #hobbies {
     grid-area: hobbies;
   }
+
+  #trainings {
+    grid-area: trainings;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -352,12 +381,12 @@ td {
   @include create-grid;
 
   html {
-    font-size: 78%;
+    font-size: 83%;
   }
 
   body {
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
   }
 

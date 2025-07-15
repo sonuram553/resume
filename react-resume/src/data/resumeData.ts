@@ -38,10 +38,7 @@ export interface ResumeData {
     name: string;
     url: string;
   }>;
-  technologies: {
-    highlighted: string[];
-    other: string[];
-  };
+  technologies: string[];
   education: Array<{
     degree: string;
     year: string;
@@ -53,6 +50,7 @@ export interface ResumeData {
   }>;
   hobbies: string[];
   libraries: string[];
+  trainings: string[];
 }
 
 export const resumeData: ResumeData = {
@@ -82,11 +80,11 @@ export const resumeData: ResumeData = {
         end: "present",
       },
       achievements: [
-        "Awarded 'Star Performer of the Month' twice for exceptional contributions and team impact.",
+        "<strong>Awarded 'Star Performer of the Month' twice </strong> for exceptional contributions and team impact.",
         "Triaged and resolved customer-reported bugs (e.g., HP, CVS Health).",
         "Authored 40+ E2E test cases using Playwright within a tight timeline.",
         "Upgraded connection creation flow and UI while assisting team members effectively.",
-        "Worked on Epics: Categorization for Connectors, Connection Creation UX Revamp, and Multiple Configurations per Connection.",
+        "<strong>Contributed to major Epics:</strong> Categorization for Connectors, Connection Creation UX Revamp, and Multiple Configurations per Connection.",
         "Developed a reusable, pixel-perfect Dynamic Form React component.",
         "Actively addressed on-call issues related to team Embrace.",
       ],
@@ -99,9 +97,9 @@ export const resumeData: ResumeData = {
         end: "Apr 2023",
       },
       achievements: [
-        "Received Coaching Champion 2022 award for exceptional mentoring and guidance.",
+        "<strong>Received Coaching Champion 2022 award</strong> for exceptional mentoring and guidance.",
         "Developed features on top SlateJS and PDF.js libraries.",
-        "Implemented PDF functionalities, including zoom and rotate.",
+        "<strong>Implemented PDF functionalities</strong>, including zoom and rotate.",
         "Developed a reusable react component carousel for recommendation pills.",
       ],
     },
@@ -137,31 +135,22 @@ export const resumeData: ResumeData = {
       url: "https://recipe-book-2b0a8.web.app/recipes",
     },
   ],
-  technologies: {
-    highlighted: [
-      "React",
-      "React Hooks",
-      "Redux",
-      "JavaScript",
-      "OOP",
-      "Git",
-      "TypeScript",
-    ],
-    other: [
-      "Redux Thunk",
-      "SlateJs",
-      "PDFjs",
-      "Axios",
-      "Scss",
-      "CSS",
-      "HTML",
-      "BEM",
-      "Data Structures",
-      "Algorithms",
-      "Angular 8",
-      "RxJS",
-    ],
-  },
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Angular",
+    "Redux",
+    "Git",
+    "OOP",
+    "DSA",
+    "Node",
+    "E2E Testing",
+    "Unit Testing",
+  ],
+
   education: [
     {
       degree: "B.Tech in Computer Science Engineering, LPU",
@@ -180,6 +169,10 @@ export const resumeData: ResumeData = {
     },
   ],
   achievements: [
+    {
+      description: "Cisco Certified Entry Network Technician - CCENT 2021",
+      year: "2021",
+    },
     {
       description: "Secured 10/10 in Network Administration in semester VIII",
       year: "2016",
@@ -214,5 +207,12 @@ export const resumeData: ResumeData = {
     "Reading",
     "Jogging",
   ],
-  libraries: ["SlateJS", "PDFjs", "AgGrid"],
+  libraries: ["SlateJS", "PDFjs", "AgGrid", "Axios", "RxJS"],
+  trainings: [
+    "Node with React: Fullstack Web Development by Stephen Grider, Udemy",
+    "Docker and Kubernetes: The Complete Guide by Stephen Grider, Udemy",
+    "SQL and PostgreSQL: The Complete Developer's Guide by Stephen Grider, Udemy",
+    "GraphQL: GraphQL by Example by Mirko Nasato, Udemy",
+    "Microservices: Microservices with Node JS and React by Stephen Grider, Udemy",
+  ],
 };
